@@ -493,11 +493,13 @@ function initScrollEffects() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         if (scrollTop > 100) {
-            navbar.style.background = 'linear-gradient(135deg, var(--burgundy) 0%, #8b1538 25%, #6b1029 50%, #4a0b1c 75%, #2a0610 100%)';
-            navbar.style.boxShadow = '0 4px 20px rgba(139, 21, 56, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3)';
+            navbar.style.background = 'rgba(26, 26, 46, 0.9)';
+            navbar.style.backdropFilter = 'blur(20px)';
+            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
         } else {
-            navbar.style.background = 'linear-gradient(135deg, var(--burgundy) 0%, #8b1538 25%, #6b1029 50%, #4a0b1c 75%, #2a0610 100%)';
-            navbar.style.boxShadow = '0 4px 20px rgba(139, 21, 56, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.05)';
+            navbar.style.backdropFilter = 'blur(20px)';
+            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
         }
         
         lastScrollTop = scrollTop;

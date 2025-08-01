@@ -384,25 +384,17 @@ function initProjects() {
             id: 5,
             title: "Twitter Data Extraction Pipeline",
             description: "Robust data pipeline for extracting and processing Twitter data for sentiment analysis using cloud-based architecture.",
-            tags: ["Data Pipeline", "API Integration", "ETL", "Cloud Computing"],
-            category: "Data Engineering",
-            gradient: "linear-gradient(135deg, #2563eb, #1a1a1a)"
+            tags: ["Data Pipeline", "API Integration", "NLP", "Cloud Computing"],
+            category: "Social Media Analytics",
+            gradient: "linear-gradient(135deg, #374151, #1f2937)"
         },
         {
             id: 6,
-            title: "Social Media Sentiment Analysis",
-            description: "Advanced NLP system analyzing sentiment patterns on social media data to derive customer insights and brand perception metrics.",
-            tags: ["Sentiment Analysis", "NLP", "Social Media", "Machine Learning"],
-            category: "Customer Intelligence",
-            gradient: "linear-gradient(135deg, #059669, #be123c)"
-        },
-        {
-            id: 7,
             title: "Facial Expression Recognition CNN",
-            description: "Deep learning model recognizing facial expressions in occluded images using Convolutional Neural Networks for emotion detection.",
-            tags: ["Deep Learning", "CNN", "Computer Vision", "TensorFlow"],
-            category: "Academic Research",
-            gradient: "linear-gradient(135deg, #be123c, #2563eb)"
+            description: "Deep learning model using Convolutional Neural Networks for real-time facial expression recognition with 92% accuracy.",
+            tags: ["Deep Learning", "Computer Vision", "CNN", "TensorFlow"],
+            category: "Computer Vision",
+            gradient: "linear-gradient(135deg, #9333ea, #c084fc)"
         }
     ];
     
@@ -416,28 +408,11 @@ function initProjects() {
         
         projectCard.innerHTML = `
             <div class="project-header" style="background: ${project.gradient};">
-                <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1), transparent);"></div>
-                
-                <!-- Tech icons -->
-                <div style="position: absolute; top: 20px; left: 20px; color: rgba(255, 255, 255, 0.7); font-size: 1.5rem;">
-                    <i class="fas fa-database"></i>
-                </div>
-                <div style="position: absolute; top: 20px; right: 20px; color: rgba(255, 255, 255, 0.7); font-size: 1.5rem;">
-                    <i class="fas fa-chart-bar"></i>
-                </div>
-                <div style="position: absolute; bottom: 20px; left: 20px; color: rgba(255, 255, 255, 0.7); font-size: 1.5rem;">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <div style="position: absolute; bottom: 20px; right: 20px; color: rgba(255, 255, 255, 0.7); font-size: 1.5rem;">
-                    <i class="fas fa-cogs"></i>
-                </div>
-                
-                <!-- Central icon -->
-                <div style="width: 80px; height: 80px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; backdrop-filter: blur(10px); z-index: 10; font-size: 2rem; border: 2px solid rgba(255, 255, 255, 0.3);">
-                    <i class="fas fa-rocket"></i>
+                <div style="text-align: center; color: white;">
+                    <i class="fas fa-chart-bar" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.9;"></i>
+                    <h4 style="font-size: 1.2rem; font-weight: 600; opacity: 0.95;">${project.category}</h4>
                 </div>
             </div>
-            
             <div class="project-content">
                 <div class="project-category">${project.category}</div>
                 <h3 class="project-title">${project.title}</h3>
@@ -454,63 +429,56 @@ function initProjects() {
 
 // Contact form functionality
 function initContactForm() {
-    const form = document.getElementById('contact-form');
+    const form = document.querySelector('.contact-form');
     
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(form);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
-        
-        // Simple validation
-        if (!name || !email || !message) {
-            alert('Please fill in all fields');
-            return;
-        }
-        
-        // Simulate form submission
-        const button = form.querySelector('.form-button');
-        const originalText = button.textContent;
-        button.textContent = 'Sending...';
-        button.disabled = true;
-        
-        setTimeout(() => {
-            alert('Thank you for your message! I will get back to you soon.');
-            form.reset();
-            button.textContent = originalText;
-            button.disabled = false;
-        }, 1500);
-    });
-}
-
-// Scroll effects and navigation
-function initScrollEffects() {
-    // Smooth scrolling for navigation links
-    const links = document.querySelectorAll('a[href^="#"]');
-    
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
+    if (form) {
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            // Get form data
+            const formData = new FormData(form);
+            const name = formData.get('name') || form.querySelector('input[placeholder="Your Name"]').value;
+            const email = formData.get('email') || form.querySelector('input[placeholder="Your Email"]').value;
+            const subject = formData.get('subject') || form.querySelector('input[placeholder="Subject"]').value;
+            const message = formData.get('message') || form.querySelector('textarea').value;
             
-            if (targetSection) {
-                const headerOffset = 80;
-                const elementPosition = targetSection.offsetTop;
-                const offsetPosition = elementPosition - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
+            // Create mailto link
+            const mailtoLink = `mailto:BasmaOkla@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            const button = form.querySelector('.form-button');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
+            button.style.background = 'linear-gradient(135deg, var(--success), var(--accent))';
+            
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.style.background = 'linear-gradient(135deg, var(--burgundy), var(--warning))';
+                form.reset();
+            }, 3000);
+        });
+    }
+}
+
+// Scroll effects and animations
+function initScrollEffects() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
                 
                 // Close mobile menu if open
                 const mobileMenu = document.getElementById('mobile-menu');
-                if (!mobileMenu.classList.contains('hidden')) {
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                 }
             }
@@ -518,23 +486,30 @@ function initScrollEffects() {
     });
     
     // Navbar background on scroll
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.nav-bar');
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+    const navbar = document.querySelector('.nav-bar');
+    let lastScrollTop = 0;
+    
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > 100) {
+            navbar.style.background = 'linear-gradient(135deg, var(--burgundy) 0%, #8b1538 25%, #6b1029 50%, #4a0b1c 75%, #2a0610 100%)';
+            navbar.style.boxShadow = '0 4px 20px rgba(139, 21, 56, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3)';
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            navbar.style.background = 'linear-gradient(135deg, var(--burgundy) 0%, #8b1538 25%, #6b1029 50%, #4a0b1c 75%, #2a0610 100%)';
+            navbar.style.boxShadow = '0 4px 20px rgba(139, 21, 56, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2)';
         }
+        
+        lastScrollTop = scrollTop;
     });
     
     // Parallax effect for background circles
-    window.addEventListener('scroll', function() {
+    const circles = document.querySelectorAll('.bg-circle');
+    
+    window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const rate = scrolled * -0.5;
         
-        const circles = document.querySelectorAll('.bg-circle');
         circles.forEach((circle, index) => {
             const speed = (index + 1) * 0.2;
             circle.style.transform = `translateY(${rate * speed}px)`;
@@ -542,60 +517,35 @@ function initScrollEffects() {
     });
 }
 
-// Add some interactive elements
-document.addEventListener('DOMContentLoaded', function() {
-    // Add hover effects to project cards
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-12px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-    
-    // Add click effects to buttons
-    const buttons = document.querySelectorAll('button');
-    buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            const ripple = document.createElement('span');
-            const rect = this.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const x = e.clientX - rect.left - size / 2;
-            const y = e.clientY - rect.top - size / 2;
-            
-            ripple.style.width = ripple.style.height = size + 'px';
-            ripple.style.left = x + 'px';
-            ripple.style.top = y + 'px';
-            ripple.classList.add('ripple');
-            
-            this.appendChild(ripple);
-            
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
-        });
-    });
+// Utility function for random number generation
+function getRandomFloat(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+// Performance optimization
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Error handling
+window.addEventListener('error', function(e) {
+    console.log('Portfolio Error:', e.error);
 });
 
-// Add CSS for ripple effect
-const style = document.createElement('style');
-style.textContent = `
-    .ripple {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
-        animation: ripple-animation 0.6s linear;
-        pointer-events: none;
-    }
-    
-    @keyframes ripple-animation {
-        to {
-            transform: scale(2);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
+// Performance monitoring
+if ('performance' in window) {
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            const perfData = performance.getEntriesByType('navigation')[0];
+            console.log('Portfolio Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+        }, 0);
+    });
+}

@@ -7,7 +7,7 @@
     <meta name="description" content="Senior Customer Journey & Data Analytics Specialist with 7+ years experience in digital transformation, customer experience optimization, and data-driven insights.">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -52,13 +52,13 @@
                     </a>
                 </div>
                 
-                <button class="md:hidden" style="color: #1a1a1a;" onclick="toggleMobileMenu()">
+                <button class="md:hidden" style="color: #2563eb;" onclick="toggleMobileMenu()">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
             
             <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-200">
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-blue-200">
                 <div class="flex flex-col space-y-2">
                     <a href="#home" class="nav-link-mobile">
                         <i class="fas fa-home mr-2"></i>Home
@@ -152,11 +152,11 @@
                                     <span class="bar-label">Analytics</span>
                                 </div>
                                 <div class="bar-item">
-                                    <div class="bar" style="height: 85%; background: var(--gray-600);" data-delay="1200"></div>
+                                    <div class="bar" style="height: 85%; background: var(--secondary);" data-delay="1200"></div>
                                     <span class="bar-label">CX Design</span>
                                 </div>
                                 <div class="bar-item">
-                                    <div class="bar" style="height: 95%; background: var(--gray-700);" data-delay="1400"></div>
+                                    <div class="bar" style="height: 95%; background: var(--accent);" data-delay="1400"></div>
                                     <span class="bar-label">Strategy</span>
                                 </div>
                             </div>
@@ -190,13 +190,21 @@
         </section>
 
         <!-- Skills Section -->
-        <section class="skills-section">
+        <section id="skills" class="skills-section">
             <div class="container mx-auto px-6">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-icon">
+                        <i class="fas fa-brain" style="color: var(--secondary);"></i>
+                    </div>
+                    <h2 class="section-title">Core Expertise</h2>
+                    <p class="section-subtitle">Technical proficiency and domain knowledge</p>
+                </div>
+                
                 <div class="skills-infographic">
                     <div class="skills-grid">
                         <div class="skill-category" data-aos="fade-right" data-aos-delay="100">
                             <div class="category-header">
-                                <div class="category-icon" style="background: var(--primary);">
+                                <div class="category-icon" style="background: var(--gradient-primary);">
                                     <i class="fas fa-chart-line"></i>
                                 </div>
                                 <h3 class="category-title">Data Analytics</h3>
@@ -234,7 +242,7 @@
                         
                         <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
                             <div class="category-header">
-                                <div class="category-icon" style="background: var(--gray-700);">
+                                <div class="category-icon" style="background: var(--gradient-accent);">
                                     <i class="fas fa-users"></i>
                                 </div>
                                 <h3 class="category-title">Customer Experience</h3>
@@ -246,7 +254,7 @@
                                         <span class="skill-percentage">92%</span>
                                     </div>
                                     <div class="skill-bar">
-                                        <div class="skill-progress" data-width="92%" style="background: var(--gray-700);"></div>
+                                        <div class="skill-progress" data-width="92%" style="background: var(--accent);"></div>
                                     </div>
                                 </div>
                                 <div class="skill-item">
@@ -255,7 +263,7 @@
                                         <span class="skill-percentage">89%</span>
                                     </div>
                                     <div class="skill-bar">
-                                        <div class="skill-progress" data-width="89%" style="background: var(--gray-700);"></div>
+                                        <div class="skill-progress" data-width="89%" style="background: var(--accent);"></div>
                                     </div>
                                 </div>
                                 <div class="skill-item">
@@ -264,7 +272,7 @@
                                         <span class="skill-percentage">85%</span>
                                     </div>
                                     <div class="skill-bar">
-                                        <div class="skill-progress" data-width="85%" style="background: var(--gray-700);"></div>
+                                        <div class="skill-progress" data-width="85%" style="background: var(--accent);"></div>
                                     </div>
                                 </div>
                             </div>
@@ -272,7 +280,7 @@
                         
                         <div class="skill-category" data-aos="fade-left" data-aos-delay="300">
                             <div class="category-header">
-                                <div class="category-icon" style="background: var(--gray-600);">
+                                <div class="category-icon" style="background: var(--gradient-warm);">
                                     <i class="fas fa-cogs"></i>
                                 </div>
                                 <h3 class="category-title">Technical Skills</h3>
@@ -284,7 +292,25 @@
                                         <span class="skill-percentage">87%</span>
                                     </div>
                                     <div class="skill-bar">
-                                        <div class="skill-progress" data-width="87%" style="background: var(--gray-600);"></div>
+                                        <div class="skill-progress" data-width="87%" style="background: var(--warning);"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Cloud Platforms</span>
+                                        <span class="skill-percentage">82%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="82%" style="background: var(--warning);"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">API Integration</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85%" style="background: var(--warning);"></div>
                                     </div>
                                 </div>
                             </div>
@@ -312,8 +338,12 @@
                                 <span>ML</span>
                             </div>
                             <div class="tech-item" style="--size: 1.1; --delay: 1.5s;">
-                                <i class="fab fa-react"></i>
-                                <span>Analytics</span>
+                                <i class="fab fa-aws"></i>
+                                <span>AWS</span>
+                            </div>
+                            <div class="tech-item" style="--size: 1.0; --delay: 1.7s;">
+                                <i class="fab fa-docker"></i>
+                                <span>Docker</span>
                             </div>
                         </div>
                     </div>
@@ -326,7 +356,7 @@
             <div class="container mx-auto px-6">
                 <div class="section-header" data-aos="fade-up">
                     <div class="section-icon">
-                        <i class="fas fa-briefcase" style="color: var(--gray-700);"></i>
+                        <i class="fas fa-briefcase" style="color: var(--secondary);"></i>
                     </div>
                     <h2 class="section-title">Professional Journey</h2>
                     <p class="section-subtitle">Strategic leadership in customer experience and data analytics</p>
@@ -346,9 +376,9 @@
             <div class="container mx-auto px-6">
                 <div class="section-header" data-aos="fade-up">
                     <div class="section-icon">
-                        <i class="fas fa-chart-line" style="color: var(--primary);"></i>
+                        <i class="fas fa-chart-line" style="color: var(--accent);"></i>
                     </div>
-                    <h2 class="section-title">Projects</h2>
+                    <h2 class="section-title">Featured Projects</h2>
                     <p class="section-subtitle">Data-driven solutions and analytical excellence</p>
                 </div>
                 
@@ -363,7 +393,7 @@
             <div class="container mx-auto px-6">
                 <div class="section-header" data-aos="fade-up">
                     <div class="section-icon">
-                        <i class="fas fa-heart" style="color: var(--gray-600);"></i>
+                        <i class="fas fa-heart" style="color: var(--success);"></i>
                     </div>
                     <h2 class="section-title">Personal Interests</h2>
                     <p class="section-subtitle">Passions that drive creativity and innovation</p>
@@ -371,24 +401,27 @@
                 
                 <div class="interests-grid">
                     <div class="interest-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="interest-icon" style="background: linear-gradient(135deg, var(--primary), var(--gray-600));">
+                        <div class="interest-icon" style="background: var(--gradient-primary);">
                             <i class="fas fa-code"></i>
                         </div>
                         <h3 class="interest-title">Technology Innovation</h3>
+                        <p class="interest-description">Exploring emerging technologies and their applications in business transformation</p>
                     </div>
                     
                     <div class="interest-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="interest-icon" style="background: linear-gradient(135deg, var(--gray-700), var(--gray-500));">
+                        <div class="interest-icon" style="background: var(--gradient-accent);">
                             <i class="fas fa-chart-bar"></i>
                         </div>
                         <h3 class="interest-title">Data Visualization</h3>
+                        <p class="interest-description">Creating compelling visual narratives that transform complex data into actionable insights</p>
                     </div>
                     
                     <div class="interest-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="interest-icon" style="background: linear-gradient(135deg, var(--gray-600), var(--gray-400));">
+                        <div class="interest-icon" style="background: var(--gradient-warm);">
                             <i class="fas fa-lightbulb"></i>
                         </div>
                         <h3 class="interest-title">Digital Strategy</h3>
+                        <p class="interest-description">Developing strategic frameworks for digital transformation and customer experience optimization</p>
                     </div>
                 </div>
             </div>
@@ -408,7 +441,7 @@
                 <div class="contact-content">
                     <div class="contact-info" data-aos="fade-right">
                         <div class="contact-item">
-                            <div class="contact-icon" style="background: linear-gradient(135deg, var(--primary), var(--gray-700));">
+                            <div class="contact-icon" style="background: var(--gradient-primary);">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
@@ -418,7 +451,7 @@
                         </div>
                         
                         <div class="contact-item">
-                            <div class="contact-icon" style="background: linear-gradient(135deg, var(--gray-700), var(--gray-600));">
+                            <div class="contact-icon" style="background: var(--gradient-accent);">
                                 <i class="fab fa-linkedin"></i>
                             </div>
                             <div>
@@ -428,7 +461,7 @@
                         </div>
                         
                         <div class="contact-item">
-                            <div class="contact-icon" style="background: linear-gradient(135deg, var(--gray-600), var(--gray-500));">
+                            <div class="contact-icon" style="background: var(--gradient-warm);">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>

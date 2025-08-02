@@ -1,4 +1,4 @@
-// Modern Interactive Portfolio JavaScript
+// Modern Interactive Portfolio JavaScript - Complete Professional Edition
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS (Animate On Scroll)

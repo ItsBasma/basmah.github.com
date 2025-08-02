@@ -3,498 +3,480 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basmah Alnasair - Senior Customer Journey & Data Analytics Specialist</title>
-    <meta name="description" content="Senior Customer Journey & Data Analytics Specialist with 7+ years experience in digital transformation, customer experience optimization, and data-driven insights.">
+    <title>Basmah Alnasair - Customer Journey & Data Analytics Specialist</title>
+    <meta name="description" content="Senior Customer Journey & Data Analytics Specialist with 7+ years of experience in digital transformation and data-driven insights. Expert in customer experience optimization and strategic analytics.">
     
-    <!-- Fonts -->
+    <!-- Modern Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Custom CSS -->
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 nav-bar">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="logo">
-                    <i class="fas fa-crown mr-3" style="color: #f39c12;"></i>
-                    Basmah Alnasair
-                </div>
-                
-                <div class="hidden md:flex space-x-4">
-                    <a href="#home" class="nav-link">
-                        <i class="fas fa-home mr-2"></i>Home
-                    </a>
-                    <a href="#journey" class="nav-link">
-                        <i class="fas fa-briefcase mr-2"></i>Experience
-                    </a>
-                    <a href="#skills" class="nav-link">
-                        <i class="fas fa-brain mr-2"></i>Skills
-                    </a>
-                    <a href="#projects" class="nav-link">
-                        <i class="fas fa-chart-line mr-2"></i>Portfolio
-                    </a>
-                    <a href="#interests" class="nav-link">
-                        <i class="fas fa-heart mr-2"></i>Interests
-                    </a>
-                    <a href="#contact" class="nav-link">
-                        <i class="fas fa-handshake mr-2"></i>Contact
-                    </a>
-                </div>
-                
-                <button class="md:hidden" style="color: #2563eb;" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+    <!-- Modern Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-crown"></i>
+                <span class="brand-text">Basmah Alnasair</span>
             </div>
-            
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-blue-200">
-                <div class="flex flex-col space-y-2">
-                    <a href="#home" class="nav-link-mobile">
-                        <i class="fas fa-home mr-2"></i>Home
-                    </a>
-                    <a href="#journey" class="nav-link-mobile">
-                        <i class="fas fa-briefcase mr-2"></i>Experience
-                    </a>
-                    <a href="#skills" class="nav-link-mobile">
-                        <i class="fas fa-brain mr-2"></i>Skills
-                    </a>
-                    <a href="#projects" class="nav-link-mobile">
-                        <i class="fas fa-chart-line mr-2"></i>Portfolio
-                    </a>
-                    <a href="#interests" class="nav-link-mobile">
-                        <i class="fas fa-heart mr-2"></i>Interests
-                    </a>
-                    <a href="#contact" class="nav-link-mobile">
-                        <i class="fas fa-handshake mr-2"></i>Contact
-                    </a>
-                </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link"><i class="fas fa-home"></i>Home</a>
+                <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i>Experience</a>
+                <a href="#skills" class="nav-link"><i class="fas fa-brain"></i>Skills</a>
+                <a href="#projects" class="nav-link"><i class="fas fa-chart-line"></i>Projects</a>
+                <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i>Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
-    <div class="main-container">
-        <!-- Hero Section -->
-        <section id="home" class="hero-section">
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center justify-between">
-                    <div class="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
-                        <div class="hero-content">
-                            <div class="mb-8 flex justify-center lg:justify-start">
-                                <div class="status-badge">
-                                    <i class="fas fa-crown mr-3" style="color: #f39c12;"></i>
-                                    <span>Senior Customer Journey Specialist</span>
-                                </div>
-                            </div>
-                            <h1 class="hero-title">
-                                Basmah <span class="hero-name">Alnasair</span>
-                            </h1>
-                            <h2 class="hero-subtitle">
-                                Customer Journey & Data Analytics Expert
-                            </h2>
-                            <p class="hero-description">
-                                Designing strategic customer experiences and driving digital transformation through 
-                                data-driven insights. Proven expertise in optimizing end-to-end journeys that align with national vision goals and regulatory excellence.
-                            </p>
-                            <div class="flex justify-center lg:justify-start">
-                                <button class="hero-button">
-                                    <i class="fas fa-file-pdf mr-2"></i>Download Resume
-                                </button>
-                            </div>
-                        </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>Senior Customer Journey Specialist</span>
+                </div>
+                <h1 class="hero-title">
+                    Basmah <span class="gradient-text" id="typing-name">Alnasair</span>
+                </h1>
+                <h2 class="hero-subtitle">Customer Journey & Data Analytics Expert</h2>
+                <div class="hero-description">
+                    <p>Designing <strong>strategic customer experiences</strong> and driving digital transformation through data-driven insights. Proven expertise in optimizing end-to-end journeys that align with national vision goals and regulatory excellence.</p>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn-primary ripple-btn">
+                        <i class="fas fa-file-pdf"></i>
+                        Download Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h2 class="section-title">Professional Achievements</h2>
+                <p class="section-subtitle">Quantifiable impact and proven expertise</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon blue-gradient">
+                        <span class="stat-number" data-target="7">0</span>
+                        <span class="stat-plus">+</span>
+                    </div>
+                    <h3 class="stat-title">Years Experience</h3>
+                    <p class="stat-description">Leading customer experience and analytics initiatives</p>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon cyan-gradient">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-plus">+</span>
+                    </div>
+                    <h3 class="stat-title">Major Projects</h3>
+                    <p class="stat-description">End-to-end customer journey transformations</p>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon orange-gradient">
+                        <span class="stat-number" data-target="200">0</span>
+                        <span class="stat-plus">+</span>
+                    </div>
+                    <h3 class="stat-title">Certifications</h3>
+                    <p class="stat-description">Advanced analytics and customer experience credentials</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">Strategic leadership and technical excellence in customer experience</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon blue-gradient">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2025 - Present</div>
+                        <h3 class="timeline-title">Senior Customer Journey Specialist</h3>
+                        <div class="timeline-company">Communications, Space & Technology Commission (CST)</div>
+                        <p class="timeline-description">Designed and optimized end-to-end customer journeys across CST services and digital platforms such as 'Mutaseel,' ensuring accessibility, transparency, and efficiency. Gathered and analyzed qualitative and quantitative customer data to drive strategic improvements aligned with National Vision goals.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-icon purple-gradient">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">January 2023 - June 2025</div>
+                        <h3 class="timeline-title">Business Experience Specialist</h3>
+                        <div class="timeline-company">Communications, Space & Technology Commission (CST)</div>
+                        <p class="timeline-description">Led cross-sector workshops and conducted comprehensive requirements analysis to support commission goals. Collaborated with policy, regulatory, and technical teams to implement digital transformation initiatives.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon cyan-gradient">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">November 2021 - December 2022</div>
+                        <h3 class="timeline-title">CX Analyst</h3>
+                        <div class="timeline-company">Huawei (STC Project)</div>
+                        <p class="timeline-description">Collected and analyzed Arabic Twitter data using Python (Tweepy, snscrape). Developed sentiment classification models using Naive Bayes, Decision Trees, and SVM algorithms. Created interactive Tableau dashboards delivering data-driven CX recommendations.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Stats Section -->
-        <section class="stats-section">
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-icon">
-                        <i class="fas fa-chart-bar" style="color: var(--primary);"></i>
-                    </div>
-                    <h2 class="section-title">Professional Achievements</h2>
-                    <p class="section-subtitle">Quantifiable impact and proven expertise</p>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-brain"></i>
                 </div>
-                
-                <div class="stats-grid">
-                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="stat-visual">
-                            <div class="circular-progress" data-percentage="100">
-                                <svg class="progress-ring" width="120" height="120">
-                                    <circle class="progress-ring-circle" stroke="var(--gray-200)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
-                                    <circle class="progress-ring-circle progress" stroke="var(--primary)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
-                                </svg>
-                                <div class="stat-number">
-                                    <span class="counter" data-target="7">0</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    
-                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stat-visual">
-                            <div class="bar-chart">
-                                <div class="bar-item">
-                                    <div class="bar" style="height: 90%; background: var(--primary);" data-delay="1000"></div>
-                                    <span class="bar-label">Analytics</span>
-                                </div>
-                                <div class="bar-item">
-                                    <div class="bar" style="height: 85%; background: var(--secondary);" data-delay="1200"></div>
-                                    <span class="bar-label">CX Design</span>
-                                </div>
-                                <div class="bar-item">
-                                    <div class="bar" style="height: 95%; background: var(--accent);" data-delay="1400"></div>
-                                    <span class="bar-label">Strategy</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stat-number" style="color: var(--primary);">
-                            <span class="counter" data-target="200">0</span>+
-                        </div>
-                        <div class="stat-label">Certifications</div>
-                    </div>
-                    
-                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="stat-visual">
-                            <div class="donut-chart">
-                                <svg width="120" height="120" viewBox="0 0 120 120">
-                                    <circle cx="60" cy="60" r="40" fill="none" stroke="var(--gray-200)" stroke-width="16"/>
-                                    <circle cx="60" cy="60" r="40" fill="none" stroke="var(--primary)" stroke-width="16" 
-                                            stroke-dasharray="251.2" stroke-dashoffset="50.24" 
-                                            transform="rotate(-90 60 60)" class="donut-progress"/>
-                                </svg>
-                                <div class="donut-center">
-                                    <div class="stat-number">
-                                        <span class="counter" data-target="15">0</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stat-label">Major Projects</div>
-                    </div>
-                </div>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technical and soft skills powering digital transformation</p>
             </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills-section">
-            <div class="container mx-auto px-6">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-icon">
-                        <i class="fas fa-brain" style="color: var(--secondary);"></i>
-                    </div>
-                    <h2 class="section-title">Core Expertise</h2>
-                    <p class="section-subtitle">Technical proficiency and domain knowledge</p>
-                </div>
-                
-                <div class="skills-infographic">
-                    <div class="skills-grid">
-                        <div class="skill-category" data-aos="fade-right" data-aos-delay="100">
-                            <div class="category-header">
-                                <div class="category-icon" style="background: var(--gradient-primary);">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <h3 class="category-title">Data Analytics</h3>
-                            </div>
-                            <div class="skill-bars">
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">Python/R</span>
-                                        <span class="skill-percentage">95%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-width="95%" style="background: var(--primary);"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">SQL/NoSQL</span>
-                                        <span class="skill-percentage">90%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-width="90%" style="background: var(--primary);"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">Tableau/Power BI</span>
-                                        <span class="skill-percentage">88%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-width="88%" style="background: var(--primary);"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                            <div class="category-header">
-                                <div class="category-icon" style="background: var(--gradient-accent);">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <h3 class="category-title">Customer Experience</h3>
-                            </div>
-                            <div class="skill-bars">
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">Journey Mapping</span>
-                                        <span class="skill-percentage">92%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-width="92%" style="background: var(--accent);"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">User Research</span>
-                                        <span class="skill-percentage">89%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-width="89%" style="background: var(--accent);"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">Service Design</span>
-                                        <span class="skill-percentage">85%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-width="85%" style="background: var(--accent);"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category" data-aos="fade-left" data-aos-delay="300">
-                            <div class="category-header">
-                                <div class="category-icon" style="background: var(--gradient-warm);">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                                <h3 class="category-title">Technical Skills</h3>
-                            </div>
-                            <div class="skill-bars">
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">Machine Learning</span>
-                                        <span class="skill-percentage">87%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-width="87%" style="background: var(--warning);"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">Cloud Platforms</span>
-                                        <span class="skill-percentage">82%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-width="82%" style="background: var(--warning);"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">API Integration</span>
-                                        <span class="skill-percentage">85%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-width="85%" style="background: var(--warning);"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Technology Stack Visualization -->
-                    <div class="tech-stack" data-aos="fade-up" data-aos-delay="400">
-                        <h3 class="tech-title">Technology Ecosystem</h3>
-                        <div class="tech-cloud">
-                            <div class="tech-item" style="--size: 1.2; --delay: 0.5s;">
-                                <i class="fab fa-python"></i>
-                                <span>Python</span>
-                            </div>
-                            <div class="tech-item" style="--size: 1.1; --delay: 0.7s;">
-                                <i class="fas fa-database"></i>
-                                <span>SQL</span>
-                            </div>
-                            <div class="tech-item" style="--size: 1.3; --delay: 0.9s;">
-                                <i class="fas fa-chart-bar"></i>
-                                <span>Tableau</span>
-                            </div>
-                            <div class="tech-item" style="--size: 1.2; --delay: 1.3s;">
-                                <i class="fas fa-brain"></i>
-                                <span>ML</span>
-                            </div>
-                            <div class="tech-item" style="--size: 1.1; --delay: 1.5s;">
-                                <i class="fab fa-aws"></i>
-                                <span>AWS</span>
-                            </div>
-                            <div class="tech-item" style="--size: 1.0; --delay: 1.7s;">
-                                <i class="fab fa-docker"></i>
-                                <span>Docker</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional Journey Timeline -->
-        <section id="journey" class="timeline-section">
-            <div class="container mx-auto px-6">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-icon">
-                        <i class="fas fa-briefcase" style="color: var(--secondary);"></i>
-                    </div>
-                    <h2 class="section-title">Professional Journey</h2>
-                    <p class="section-subtitle">Strategic leadership in customer experience and data analytics</p>
-                </div>
-                
-                <div class="timeline-container">
-                    <div class="timeline-line"></div>
-                    <div id="timeline-items">
-                        <!-- Timeline items will be generated by JavaScript -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Portfolio -->
-        <section id="projects" class="projects-section">
-            <div class="container mx-auto px-6">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-icon">
-                        <i class="fas fa-chart-line" style="color: var(--accent);"></i>
-                    </div>
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">Data-driven solutions and analytical excellence</p>
-                </div>
-                
-                <div class="projects-grid" id="projects-container">
-                    <!-- Projects will be generated by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Personal Interests -->
-        <section id="interests" class="interests-section">
-            <div class="container mx-auto px-6">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-icon">
-                        <i class="fas fa-heart" style="color: var(--success);"></i>
-                    </div>
-                    <h2 class="section-title">Personal Interests</h2>
-                    <p class="section-subtitle">Passions that drive creativity and innovation</p>
-                </div>
-                
-                <div class="interests-grid">
-                    <div class="interest-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="interest-icon" style="background: var(--gradient-primary);">
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-right">
+                    <div class="skill-header">
+                        <div class="skill-icon blue-gradient">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h3 class="interest-title">Technology Innovation</h3>
-                        <p class="interest-description">Exploring emerging technologies and their applications in business transformation</p>
+                        <h3 class="skill-title">Technical Skills</h3>
                     </div>
-                    
-                    <div class="interest-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="interest-icon" style="background: var(--gradient-accent);">
-                            <i class="fas fa-chart-bar"></i>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python & Data Analysis</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress blue-gradient" data-width="95%"></div>
+                            </div>
                         </div>
-                        <h3 class="interest-title">Data Visualization</h3>
-                        <p class="interest-description">Creating compelling visual narratives that transform complex data into actionable insights</p>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Customer Journey Mapping</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress purple-gradient" data-width="92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Machine Learning</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress cyan-gradient" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Tableau & Data Visualization</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress orange-gradient" data-width="90%"></div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="interest-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="interest-icon" style="background: var(--gradient-warm);">
-                            <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="skill-category" data-aos="fade-left">
+                    <div class="skill-header">
+                        <div class="skill-icon purple-gradient">
+                            <i class="fas fa-users"></i>
                         </div>
-                        <h3 class="interest-title">Digital Strategy</h3>
-                        <p class="interest-description">Developing strategic frameworks for digital transformation and customer experience optimization</p>
+                        <h3 class="skill-title">Soft Skills</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Analytical Thinking</span>
+                                <span class="skill-percentage">96%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress emerald-gradient" data-width="96%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Cross-functional Collaboration</span>
+                                <span class="skill-percentage">94%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress blue-gradient" data-width="94%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Stakeholder Management</span>
+                                <span class="skill-percentage">91%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress cyan-gradient" data-width="91%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Workshop Facilitation</span>
+                                <span class="skill-percentage">89%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress orange-gradient" data-width="89%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container mx-auto px-6">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-icon" style="background: var(--white);">
-                        <i class="fas fa-handshake" style="color: var(--primary);"></i>
-                    </div>
-                    <h2 class="section-title" style="color: var(--white);">Let's Connect</h2>
-                    <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Ready to collaborate on your next customer experience initiative</p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-chart-line"></i>
                 </div>
-                
-                <div class="contact-content">
-                    <div class="contact-info" data-aos="fade-right">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Data-driven solutions and analytical excellence</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-icon blue-gradient">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="project-title">Supermarket Sales Analysis</h3>
+                    <p class="project-description">Comprehensive analysis of retail sales data to identify patterns, trends, and optimization opportunities.</p>
+                    <div class="project-tags">
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">Retail Analytics</span>
+                        <span class="tag">Business Intelligence</span>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-icon purple-gradient">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="project-title">Employee Attrition Project</h3>
+                    <p class="project-description">Predictive analytics project to identify factors contributing to employee turnover and retention strategies.</p>
+                    <div class="project-tags">
+                        <span class="tag">Predictive Analytics</span>
+                        <span class="tag">HR Analytics</span>
+                        <span class="tag">Data Mining</span>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-icon cyan-gradient">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="project-title">Heart Disease Prediction</h3>
+                    <p class="project-description">Machine learning model for predicting heart disease risk using patient data and medical indicators.</p>
+                    <div class="project-tags">
+                        <span class="tag">Healthcare ML</span>
+                        <span class="tag">Risk Prediction</span>
+                        <span class="tag">Medical Data</span>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-icon emerald-gradient">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="project-title">Social Media Sentiment Analysis</h3>
+                    <p class="project-description">Analyzing sentiment patterns on social media data to derive customer insights and brand perception.</p>
+                    <div class="project-tags">
+                        <span class="tag">Sentiment Analysis</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Social Media</span>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-icon orange-gradient">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="project-title">Facial Expression Recognition CNN</h3>
+                    <p class="project-description">Recognizing facial expressions in occluded images using Convolutional Neural Networks for emotion detection.</p>
+                    <div class="project-tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">CNN</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-icon indigo-gradient">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="project-title">Twitter Data Extraction Pipeline</h3>
+                    <p class="project-description">Building robust data pipeline for extracting and processing Twitter data for sentiment analysis.</p>
+                    <div class="project-tags">
+                        <span class="tag">Data Pipeline</span>
+                        <span class="tag">API Integration</span>
+                        <span class="tag">ETL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Ready to collaborate and drive digital transformation</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3 class="contact-title">Get In Touch</h3>
+                    <div class="contact-items">
                         <div class="contact-item">
-                            <div class="contact-icon" style="background: var(--gradient-primary);">
+                            <div class="contact-icon blue-gradient">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div>
-                                <h4 style="color: var(--white); font-size: 1.2rem; font-weight: 600; margin-bottom: 8px;">Email</h4>
-                                <a href="mailto:BasmaOkla@outlook.com" class="contact-link">BasmaOkla@outlook.com</a>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>BasmaOkla@outlook.com</p>
                             </div>
                         </div>
-                        
                         <div class="contact-item">
-                            <div class="contact-icon" style="background: var(--gradient-accent);">
-                                <i class="fab fa-linkedin"></i>
+                            <div class="contact-icon purple-gradient">
+                                <i class="fas fa-phone"></i>
                             </div>
-                            <div>
-                                <h4 style="color: var(--white); font-size: 1.2rem; font-weight: 600; margin-bottom: 8px;">LinkedIn</h4>
-                                <a href="https://linkedin.com/in/basmah-alnasair-8a839b124" class="contact-link" target="_blank">Connect with me</a>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+966507507582</p>
                             </div>
                         </div>
-                        
                         <div class="contact-item">
-                            <div class="contact-icon" style="background: var(--gradient-warm);">
+                            <div class="contact-icon cyan-gradient">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <div>
-                                <h4 style="color: var(--white); font-size: 1.2rem; font-weight: 600; margin-bottom: 8px;">Location</h4>
-                                <span class="contact-link">Riyadh, Saudi Arabia</span>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Riyadh, Saudi Arabia</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <form class="contact-form" data-aos="fade-left">
+                    <div class="social-links">
+                        <h4>Connect with Me</h4>
+                        <div class="social-icons">
+                            <a href="https://linkedin.com/in/basmah-alnasair-8a839b124" target="_blank" class="social-link blue-gradient">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link purple-gradient">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link cyan-gradient">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form" id="contact-form">
+                        <h3 class="form-title">Send Message</h3>
                         <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-input" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Subject" required>
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea class="form-input" rows="6" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="form-button">
-                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        <button type="submit" class="btn-primary ripple-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
                         </button>
                     </form>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="footer-name">Basmah Alnasair</h3>
+                    <p class="footer-role">Customer Journey & Data Analytics Specialist</p>
+                    <p class="footer-tagline">Bringing mindful analytics to digital transformation</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigate</h4>
+                        <a href="#home">Home</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Values</h4>
+                        <p>Mindful Analytics</p>
+                        <p>Balanced Growth</p>
+                        <p>Conscious Innovation</p>
+                        <p>Harmonious Design</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="https://linkedin.com/in/basmah-alnasair-8a839b124" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:BasmaOkla@outlook.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Basmah Alnasair. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Custom JavaScript -->
     <script src="script.js"></script>

@@ -1,12 +1,12 @@
-// Clean Professional Portfolio JavaScript
+// Modern Interactive Portfolio JavaScript
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS animations
     AOS.init({
-        duration: 800,
+        duration: 1000,
         once: true,
-        offset: 100,
+        offset: 120,
         easing: 'ease-out-cubic'
     });
     
@@ -233,21 +233,21 @@ function initProjects() {
             title: 'Predictive Customer Churn Model',
             description: 'Machine learning model predicting customer churn with 94% accuracy, enabling proactive retention strategies.',
             icon: 'fas fa-brain',
-            color: 'var(--gray-700)',
+            color: 'var(--secondary)',
             tags: ['Python', 'Scikit-learn', 'AWS', 'Docker']
         },
         {
             title: 'Real-time Dashboard Suite',
             description: 'Executive dashboard providing real-time KPI monitoring and automated reporting for strategic decision-making.',
             icon: 'fas fa-chart-line',
-            color: 'var(--gray-600)',
+            color: 'var(--accent)',
             tags: ['Power BI', 'SQL', 'Azure', 'DAX']
         },
         {
             title: 'Voice of Customer Analytics',
             description: 'Natural language processing system analyzing customer feedback across multiple channels to extract actionable insights.',
             icon: 'fas fa-comments',
-            color: 'var(--gray-800)',
+            color: 'var(--success)',
             tags: ['Python', 'NLP', 'Sentiment Analysis', 'API']
         }
     ];
@@ -310,7 +310,7 @@ function initContactForm() {
 
 // Scroll effects
 function initScrollEffects() {
-    // Navbar background on scroll
+    // Enhanced navbar background on scroll
     const navbar = document.querySelector('.nav-bar');
     let lastScrollTop = 0;
     
@@ -319,16 +319,21 @@ function initScrollEffects() {
         
         if (scrollTop > 100) {
             navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            navbar.style.boxShadow = '0 8px 30px rgba(37, 99, 235, 0.15)';
+            navbar.style.borderBottomColor = 'rgba(37, 99, 235, 0.2)';
         } else {
             navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            navbar.style.boxShadow = '0 4px 20px rgba(37, 99, 235, 0.1)';
+            navbar.style.borderBottomColor = 'rgba(37, 99, 235, 0.1)';
         }
         
         lastScrollTop = scrollTop;
     });
     
-    // Smooth scrolling for navigation links
+    // Add interactive elements
+    initInteractiveElements();
+    
+    // Enhanced smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -338,7 +343,120 @@ function initScrollEffects() {
                     behavior: 'smooth',
                     block: 'start'
                 });
+                
+                // Add active state animation
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
             }
         });
     });
 }
+
+// Interactive elements initialization
+function initInteractiveElements() {
+    // Add hover effects to cards
+    const cards = document.querySelectorAll('.stat-card, .skill-category, .project-card, .interest-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-12px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+    
+    // Add click effects to buttons
+    const buttons = document.querySelectorAll('.hero-button, .form-button');
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+    
+    // Add parallax effect to hero section
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroSection = document.querySelector('.hero-section');
+        if (heroSection) {
+            heroSection.style.transform = `translateY(${scrolled * 0.2}px)`;
+        }
+    });
+    
+    // Add typing effect to hero title
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        const text = heroTitle.innerHTML;
+        heroTitle.innerHTML = '';
+        let i = 0;
+        
+        const typeWriter = () => {
+            if (i < text.length) {
+                heroTitle.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        };
+        
+        setTimeout(typeWriter, 1000);
+    }
+}
+
+// Add CSS for ripple effect
+const rippleStyle = document.createElement('style');
+rippleStyle.textContent = `
+    .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+        transform: scale(0);
+        animation: ripple-animation 0.6s linear;
+        pointer-events: none;
+    }
+    
+    @keyframes ripple-animation {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+    
+    .card-glow {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .card-glow::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+        transition: left 0.5s ease;
+    }
+    
+    .card-glow:hover::before {
+        left: 100%;
+    }
+`;
+document.head.appendChild(rippleStyle);
